@@ -9,16 +9,11 @@ class ComposerStaticInit3671bdd426f2f36526c651b7fe1d2c61
     public static $prefixLengthsPsr4 = array (
         'M' => 
         array (
-            'Magdasaif\\Products\\Providers\\' => 29,
             'Magdasaif\\Products\\' => 19,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Magdasaif\\Products\\Providers\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src/app/providers',
-        ),
         'Magdasaif\\Products\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',

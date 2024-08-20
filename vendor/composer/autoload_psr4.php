@@ -6,6 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Magdasaif\\Products\\Providers\\' => array($baseDir . '/src/app/providers'),
     'Magdasaif\\Products\\' => array($baseDir . '/src'),
 );
