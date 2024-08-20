@@ -1,7 +1,7 @@
 {
     "name": "magdasaif/products",
     "description": "this package to handle product basic details",
-    "type": "hlibrary",
+    "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
