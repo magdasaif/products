@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 class ProductController extends Controller
 {
     public function test(){
-        return 'hello';
+        // return 'hello';
+        return view('products::test-view');
     }
 }

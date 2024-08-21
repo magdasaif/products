@@ -9,6 +9,7 @@ class ProductServiceProvider extends ServiceProvider
         //==============================================================================================
         //to load package routes in any project background
         $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views','products');
 
         //to load package migrations files in any project background
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Magdasaif\Products\app\http\controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-    Route::get('product', function(){
-        return 'hello from product package';
-    });
+Route::get('product', function(){
+    return 'hello from product package';
+});
+// Route::get('test-view', [ProductController::class,'test']);
+Route::get('test-view', function(){
+    return view('products::test-view');
+});
