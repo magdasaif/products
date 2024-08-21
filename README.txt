@@ -6,8 +6,9 @@
     1- install package through this command
         composer require magdasaif/products:dev-dev
 
-    2- add provider to config/app.php providers array
+    2- add provider to config/app.php providers array (in laravel version less than 11)
         Magdasaif\Products\app\providers\ProductServiceProvider::class,
+        
 
 then you can 
     - access any route in this package
