@@ -19,7 +19,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Magdasaif\\Products\\app\\providers\\ProductServiceProvider"
+                "Magdasaif\\Products\\app\\providers\\ProductServiceProvider",
+                "Magdasaif\\Products\\app\\providers\\RouteServiceProvider"
             ]
         }
     }

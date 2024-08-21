@@ -8,6 +8,8 @@
 
     2- add provider to config/app.php providers array (in laravel version less than 11)
         Magdasaif\Products\app\providers\ProductServiceProvider::class,
+
+     php artisan vendor:publish --tag=product-module
         
 
 then you can 
