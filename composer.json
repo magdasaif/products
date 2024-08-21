@@ -25,14 +25,17 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": [
-            "@php artisan vendor:publish --tag=product-module --ansi --force"
+        "post-package-install": [
+            "@php artisan vendor:publish --tag=product-module"
+        ],
+        "post-package-update": [
+            "@php artisan vendor:publish --tag=product-module"
         ],
         "post-install-cmd": [
-            "@php artisan vendor:publish --tag=product-module --ansi --force"
+            "@php artisan vendor:publish --tag=product-module"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=product-module --ansi --force"
+            "@php artisan vendor:publish --tag=product-module"
         ]
     }
 }
