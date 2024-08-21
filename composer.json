@@ -27,6 +27,9 @@
     "scripts": {
         "post-root-package-install": [
             "@php artisan vendor:publish --tag=product-module"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=product-module --ansi --force"
         ]
     }
 }
