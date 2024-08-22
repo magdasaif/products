@@ -47,7 +47,7 @@ class ProductController extends Controller
             
             //dd();
             // Storage::disk('images')->put('images/1/smalls'.'/'.$fileName, $img, 'public');
-            Storage::disk('images')->put($fileName, $img, 'public');
+            Storage::disk('product-images')->put($fileName, $img, 'public');
         }
         //==================================================================
         // dd($image_path);
@@ -56,18 +56,13 @@ class ProductController extends Controller
     }
     //==================================================================
     public function fetchImage(){
-        // return 'ffffffffff';
         // return asset('storage/'.$image_path);
-
-        // $files = File::files(storage_path('images'));
-        $files = File::files(storage_path('app/public/images'));
-        $images = [];
-
+        $imgs = [];
+        $files = File::files(storage_path('app/public/product-images'));
         foreach ($files as $file) {
-            $images[] = $file->getRelativePathname();
+            $imgs[]= '<img src="'.asset('storage/product-images/'.$file->getRelativePathname()).'">';
         }
-
-        return $images;
+        return $imgs;
     }
     //==================================================================
 

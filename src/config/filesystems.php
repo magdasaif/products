@@ -45,10 +45,10 @@ return [
     'disks' => [
         // ... other disks
 
-        'images' => [
+        'product-images' => [
             'driver'        => 'local',
-            'root'          => storage_path('app/public/images'),  //storage-app-public-images
-            'url'           => env('APP_URL') . '/storage/images',
+            'root'          => storage_path('app/public/product-images'),  //storage-app-public-product-images
+            'url'           => env('APP_URL') . '/storage/product-images',
             'visibility'    => 'public',
         ],
     ]
