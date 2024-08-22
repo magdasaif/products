@@ -25,7 +25,7 @@ class ProductServiceProvider extends ServiceProvider
         //to handle publish step for views file 
         $this->publishes([
             __DIR__.'/../../resources/views' => resource_path('views/vendor/products'),
-        ]);
+        ],'product-views');
         //==============================================================================================
         //try to publish all package folder
         // $this->publishes([
