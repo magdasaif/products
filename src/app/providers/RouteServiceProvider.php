@@ -39,10 +39,16 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes(): void
     {
-        if(is_dir(base_path('modules/products/routes/web.php'))){
+        // if(is_dir(base_path('modules/products/routes/web.php'))){
+        //     Route::middleware('web')
+        //         ->namespace($this->moduleNamespace)
+        //         ->group(base_path('modules/products/routes/web.php'));
+        // }
+
+        if (file_exists(base_path('routes/product.php'))) {
             Route::middleware('web')
                 ->namespace($this->moduleNamespace)
-                ->group(base_path('modules/products/routes/web.php'));
+                ->group(base_path('routes/product.php'));
         }
     }
 
@@ -53,11 +59,11 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes(): void
     {
-        if(is_dir(base_path('modules/products/routes/api.php'))){
-            Route::prefix('api')
-                ->middleware('api')
-                ->namespace($this->moduleNamespace)
-                ->group(base_path('modules/products/routes/api.php'));
-        }
+        // if(is_dir(base_path('modules/products/routes/api.php'))){
+        //     Route::prefix('api')
+        //         ->middleware('api')
+        //         ->namespace($this->moduleNamespace)
+        //         ->group(base_path('modules/products/routes/api.php'));
+        // }
     }
 }
