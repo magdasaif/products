@@ -5,6 +5,7 @@ use Illuminate\Support\ServiceProvider;
 
 class ProductServiceProvider extends ServiceProvider
 {
+    //==============================================================================================
     public function boot(){
         //==============================================================================================
         //to load package routes in any project background
@@ -23,18 +24,18 @@ class ProductServiceProvider extends ServiceProvider
         //==============================================================================================
         //to handle publish step for views file 
         $this->publishes([
-            __DIR__.'/../../resources/views' => base_path('resources/views')
-        ], 'product-views');
-
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/products'),
+        ]);
         //==============================================================================================
         //try to publish all package folder
-        $this->publishes([
-            dirname(__DIR__) .'/../../src' => base_path('modules/products')
-        ], 'product-module');
+        // $this->publishes([
+        //     dirname(__DIR__) .'/../../src' => base_path('modules/products')
+        // ], 'product-module');
         //==============================================================================================
     }
-
+    //==============================================================================================
     public function register(){
         
     }
+    //==============================================================================================
 }

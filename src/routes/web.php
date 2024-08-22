@@ -17,7 +17,8 @@ use Magdasaif\Products\app\http\controllers\ProductController;
 Route::get('product', function(){
     return 'hello from product package';
 });
-// Route::get('test-view', [ProductController::class,'test']);
-Route::get('test-view', function(){
-    return view('products::test-view');
-});
+
+
+Route::get('image_form', [ProductController::class,'test']);
+Route::post('store_image',[ProductController::class,'storeImage'])->name('store_image');
+Route::get('fetch_images',[ProductController::class,'fetchImage'])->name('fetch_images');
