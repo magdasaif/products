@@ -15,7 +15,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {},
+    "require": {
+        "intervention/image": "^2.5"
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -26,16 +28,24 @@
     },
     "scripts": {
         "post-package-install": [
-            "@php artisan vendor:publish --tag=product-module"
+            "@php artisan vendor:publish --tag=product-migrations",
+            "@php artisan vendor:publish --tag=product-views",
+            "@php artisan vendor:publish --tag=product-routes"
         ],
         "post-package-update": [
-            "@php artisan vendor:publish --tag=product-module"
+            "@php artisan vendor:publish --tag=product-migrations",
+            "@php artisan vendor:publish --tag=product-views",
+            "@php artisan vendor:publish --tag=product-routes"
         ],
         "post-install-cmd": [
-            "@php artisan vendor:publish --tag=product-module"
+            "@php artisan vendor:publish --tag=product-migrations",
+            "@php artisan vendor:publish --tag=product-views",
+            "@php artisan vendor:publish --tag=product-routes"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=product-module"
+            "@php artisan vendor:publish --tag=product-migrations",
+            "@php artisan vendor:publish --tag=product-views",
+            "@php artisan vendor:publish --tag=product-routes"
         ]
     }
 }

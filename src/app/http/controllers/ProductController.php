@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Http\RedirectResponse;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
+use Magdasaif\Products\app\http\requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -17,12 +18,12 @@ class ProductController extends Controller
         return view('products::test-view');//products is the name of namespace in loadViewsFrom fun 
     }
     //==================================================================
-    public function storeImage(Request $request){
+    public function storeImage(ProductRequest $request){
         // return $request->all();
 
-        $this->validate($request, [
-            'image' => 'required|image|mimes:jpeg,png,gif|max:2048',
-        ]);
+        // $this->validate($request, [
+        //     'image' => 'required|image|mimes:jpeg,png,gif|max:2048',
+        // ]);
         //==================================================================
         // $imageName = time().'.'.$request->image->getClientOriginalExtension();
         // $image_path=$request->image->storeAs('images', $imageName);//storage/app/images
